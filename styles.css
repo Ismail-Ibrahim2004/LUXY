@@ -1,0 +1,299 @@
+:root {
+    --rich-black: #222222;
+    --warm-gold: #C9B38B;
+    --light-gray: #F5F5F5;
+    --wooden-brown: #A67C52;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--rich-black);
+    background-color: var(--light-gray);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.slide h2 {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    color: var(--light-gray);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+  }
+.project-overlay {
+  opacity: 0;
+  transition: all 0.3s ease;
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.5);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color: var(--light-gray);
+}
+.project-item:hover .project-overlay {
+  opacity:1;
+}
+  
+
+/* Navigation */
+.navbar {
+    background-color: var(--rich-black);
+    padding: 1.5rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--warm-gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--warm-gold);
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 80px;
+    min-height: 100vh;
+    background-color: var(--rich-black);
+    color: var(--light-gray);
+}
+
+.portfolio-slider {
+    height: 70vh;
+    background-color: var(--wooden-brown);
+    position: relative;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 4rem 0;
+    background-color: var(--light-gray);
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* About Section */
+.about {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+/* Projects Section */
+.projects {
+    padding: 6rem 0;
+    background-color: var(--rich-black);
+    color: var(--light-gray);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.filter-btn {
+    background: none;
+    border: 2px solid var(--warm-gold);
+    color: var(--warm-gold);
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--warm-gold);
+    color: var(--rich-black);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Process Section */
+.process {
+    padding: 6rem 0;
+    background-color: var(--light-gray);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    font-size: 2.5rem;
+    color: var(--warm-gold);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 6rem 0;
+    background-color: var(--rich-black);
+    color: var(--light-gray);
+}
+
+.consultation-form {
+    max-width: 600px;
+    margin: 3rem auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-gray);
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: var(--warm-gold);
+    color: var(--rich-black);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--wooden-brown);
+    color: var(--light-gray);
+}
+
+/* Footer */
+footer {
+    background-color: var(--rich-black);
+    color: var(--light-gray);
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: var(--warm-gold);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--wooden-brown);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .portfolio-slider {
+        height: 50vh;
+    }
+} 
